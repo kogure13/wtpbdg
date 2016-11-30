@@ -486,7 +486,17 @@ class Rekap {
     }
     
     function rekapLpH() {
+        $nowDate = date('d');
+        $nowMonth = date('M');
+        $nowYear = date('Y');
         
+        $where = "WHERE tgl_bayar = ".$nowDate." AND bln_bayar = ".$nowMonth." AND thn_bayar = ".$nowYear;
+        
+        $query = "SELECT * FROM wtp_tagihan_air"
+                . $where." ";
+        $result = mysql_query($query);
+        
+        return $result;
     }
 
 }
