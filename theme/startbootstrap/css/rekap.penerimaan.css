@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 2, 2016, 10:41:43 AM
+    Author     : Administrator
+*/
+
+.rekap-title {
+    font-family: serif;
+    font-size: 12pt;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rekap-table {
+    font-family: serif;
+    width: 100%;
+    max-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.rekap-table-bordered > thead > tr > th,
+.rekap-table-bordered > thead > tr > td,
+.rekap-table-bordered > tbody > tr > td,
+.rekap-table-bordered > tfoot > tr > th {
+    border: 1px solid #111;
+}
+
+.rekap-table > thead > tr > th,
+.rekap-table > tfoot > tr > th {
+    padding: 2px;
+    text-align: center;
+    line-height: 1.42857143;
+    background-color: #a0a0a0;
+}
