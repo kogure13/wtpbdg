@@ -485,19 +485,26 @@ class Rekap {
         return $query;
     }
     
-    function rekapLpH() {
-        $nowDate = date('d');
-        $nowMonth = date('M');
-        $nowYear = date('Y');
+    function rekapLpH($field, $tgl_bayar, $bln_bayar, $thn_bayar) {
+//        $nowDate = date('d');
+//        $nowMonth = date('m');
+//        $nowYear = date('Y');
+        if($tgl_bayar == 0){
+            $where = "WHERE bln_bayar = ".$bln_bayar." "
+                . "AND thn_bayar = ".$thn_bayar." AND status_bayar = 1";
+        }else{
+            $where = "WHERE tgl_bayar = ".$tgl_bayar." AND bln_bayar = ".$bln_bayar." "
+                . "AND thn_bayar = ".$thn_bayar." AND status_bayar = 1";
+        }
         
-        $where = "WHERE tgl_bayar = ".$nowDate." AND bln_bayar = ".$nowMonth." AND thn_bayar = ".$nowYear;
-        
-        $query = "SELECT * FROM wtp_tagihan_air"
-                . $where." ";
+        $query = "SELECT sum(jml_bayar) AS jml_bayar FROM wtp_tagihan_air $where";
         $result = mysql_query($query);
-        
-        return $result;
-    }
+        $data = mysql_fetch_array($result);
+//        echo $data; exit;
+        if($field == "jml_bayar")
+            echo number_format($data['jml_bayar']);
+//        return $data['jml_bayar'];
+    }        
 
 }
 

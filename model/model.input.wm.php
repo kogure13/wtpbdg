@@ -156,6 +156,7 @@ if (isset($_POST['inputMeter'])) {
                     'thn_bayar' => '',
                     'jml_bayar' => '',
                     'denda' => '',
+                    'pembulatan' => '',
                     'status_bayar' => 0
                 );
                 $tableName = "wtp_tagihan_air";

@@ -6,7 +6,6 @@ $endDate = date('d', $month_end);
 //echo date('d M Y', $month_start).'<br/>';
 //echo date('d M Y', $month_end).'<br/>';
 $rekap = new Rekap;
-
 ?>
 
 <table class="rekap-table rekap-table-bordered">
@@ -28,15 +27,18 @@ $rekap = new Rekap;
         </tr>
     </thead>
     <tbody>
-        <?php
-        $jmlBayar = 0;
-        for($i=1; $i<=$endDate; $i++){
+        <?php        
+        $jml_harga = 0;        
+        $bln_bayar = date('m');
+        $thn_bayar = date('Y');
+        
+        for($i=0; $i<$endDate; $i++){
             ?>
-            <tr <?=($i==date('d') ? 'style="background-color: #98abf1; color: #fff"':'')?>>
+            <tr <?=($i+1==date('d') ? 'style="background-color: #98abf1; color: #fff"':'')?>>
                 <td align="center">
-                    <?=$i." ".date('M Y')?>
+                    <?=($i+1)." ".date('M Y')?>
                 </td>
-                <td align="right"></td>
+                <td align="right"><?=$rekap->rekapLpH("jml_bayar", $i+1, $bln_bayar, $thn_bayar)?></td>
                 <td align="right"></td>
                 <td align="right"></td>
                 <td align="right"></td>
@@ -44,7 +46,7 @@ $rekap = new Rekap;
                 <td align="right"></td>
                 <td align="right"></td>
                 <td align="right">
-                    <b></b>
+                    <b>haha</b>
                 </td>
             </tr>
             <?php
@@ -54,7 +56,7 @@ $rekap = new Rekap;
     <tfoot>
         <tr>
             <th align="center">JUMLAH</th>
-            <th align="right"></th>
+            <th align="right"><b><?=$rekap->rekapLpH("jml_bayar", 0, $bln_bayar, $thn_bayar)?></b></th>
             <th align="right"></th>
             <th align="right"></th>
             <th align="right"></th>

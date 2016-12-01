@@ -4,6 +4,7 @@ $year_end = strtotime('last day of December', time());
  $endMonth = date('m', $year_end);
 //echo date('d M Y', $month_start).'<br/>';
 //echo date('d M Y', $month_end).'<br/>';
+ $rekap = new Rekap;
 ?>
 
 <table class="rekap-table rekap-table-bordered">
@@ -26,13 +27,14 @@ $year_end = strtotime('last day of December', time());
     </thead>
     <tbody>
         <?php
-        for($i=1; $i<=$endMonth; $i++){
+        $thn_bayar = date('Y');
+        for($i=0; $i<$endMonth; $i++){
             ?>
-            <tr>
+            <tr <?=(($i+1)==date('m') ? 'style="background-color: #98abf1; color: #fff"':'')?>>
                 <td align="">
-                    <?=  namaBulan($i)." ".date('Y')?>
+                    <?=namaBulan($i+1)." ".date('Y')?>
                 </td>
-                <td align="right"></td>
+                <td align="right"><?=$rekap->rekapLpH("jml_bayar", 0, $i+1, $thn_bayar)?></td>
                 <td align="right"></td>
                 <td align="right"></td>
                 <td align="right"></td>
