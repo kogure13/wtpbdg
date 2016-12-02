@@ -37,3 +37,10 @@ and open the template in the editor.
     line-height: 1.42857143;
     background-color: #a0a0a0;
 }
+
+.rekap-table > thead > tr > td,
+.rekap-table > tbody > tr > td,
+.rekap-table > tfoot > tr > th {
+    padding: 2px;    
+    line-height: 1.42857143;    
+}

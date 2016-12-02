@@ -8,6 +8,31 @@ $endDate = date('d', $month_end);
 $rekap = new Rekap;
 ?>
 
+<script type="text/javascript">
+    $(function(){
+       $("#vForm").validate({
+          rules: {
+              periode: "required"
+          },
+          messages: {
+              periode: " *) Harus dipilih"
+          },
+          submitHandler: function(form) {
+              form.submit();
+          }
+       });
+    });
+</script>
+<form class="form-group form-inline" method="post" enctype="multipart/form-data" novalidate="novalidate" id="vForm" accept="#" >
+    <div class="form-group">
+        <input type="text" name="periode" id="txtDate" class="input-sm form-control" placeholder="Periode...">
+    </div>
+    <div class="form-group">
+        <input type="submit" name="submit_harian" value="Cari.." class="btn btn-sm btn-default">        
+    </div>    
+</form>
+
+
 <table class="rekap-table rekap-table-bordered">
     <thead>
         <tr>
@@ -28,20 +53,36 @@ $rekap = new Rekap;
     </thead>
     <tbody>
         <?php        
-        $jml_harga = 0;        
-        $bln_bayar = date('m');
-        $thn_bayar = date('Y');
+        if(isset($_POST['submit_harian'])){
+            list($bln_bayar, $thn_bayar) = explode("/", $_POST['periode']);
+//            $selisih = date('m') - $bln_bayar;            
+//            $selisih = strtotime('- '.$selisih.' month', strtotime($bln_bayar));
+            $dateFirst = $bln_bayar."/1/".$thn_bayar;
+            
+            $endDate = date('t', strtotime($dateFirst));
+            $date = date('M', strtotime($dateFirst));
+//            exit;
+//            $endDate = date('d', $date);
+            $format = $date." ".date('Y');
+        }else{
+            $bln_bayar = date('m');
+            $thn_bayar = date('Y');
+            $format = date('M Y');
+        }
         
+        $jml_Rek_Row = $jml_Rek_Col = 0;  
+        $a = $b = $c = $d = array();
+                        
         for($i=0; $i<$endDate; $i++){
             ?>
-            <tr <?=($i+1==date('d') ? 'style="background-color: #98abf1; color: #fff"':'')?>>
+            <tr>
                 <td align="center">
-                    <?=($i+1)." ".date('M Y')?>
+                    <?=($i+1)." ".$format?>
                 </td>
-                <td align="right"><?=$rekap->rekapLpH("jml_bayar", $i+1, $bln_bayar, $thn_bayar)?></td>
-                <td align="right"></td>
-                <td align="right"></td>
-                <td align="right"></td>
+                <td align="right"> <?=$a[$i] = $rekap->rekapLpH("jml_bayar", $i+1, $bln_bayar, $thn_bayar)?></td>
+                <td align="right"> </td>
+                <td align="right"> </td>
+                <td align="right"><?=$d[$i] = $a[$i] ?> </td>
                 <td align="right"></td>
                 <td align="right"></td>
                 <td align="right"></td>

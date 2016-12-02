@@ -6,6 +6,12 @@
     });
     
     $(document).ready(function () {
+        $("#txtDate").datepicker({           
+           format: 'mm/yyyy',
+           autoclose: true,
+           minViewMode: 1
+        });
+        
         $(".date").datepicker({
             format: 'yyyy/mm/dd',
             autoclose: true,

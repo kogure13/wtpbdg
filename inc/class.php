@@ -489,7 +489,9 @@ class Rekap {
 //        $nowDate = date('d');
 //        $nowMonth = date('m');
 //        $nowYear = date('Y');
-        if($tgl_bayar == 0){
+        if($tgl_bayar == 0  && $bln_bayar == 0){
+            $where = "WHERE thn_bayar = ".$thn_bayar." AND status_bayar = 1";
+        }else if($tgl_bayar == 0){
             $where = "WHERE bln_bayar = ".$bln_bayar." "
                 . "AND thn_bayar = ".$thn_bayar." AND status_bayar = 1";
         }else{

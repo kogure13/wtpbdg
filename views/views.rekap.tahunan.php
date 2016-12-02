@@ -22,13 +22,15 @@ $nowYear = date('Y');
     </thead>
     <tbody>
         <?php
+        $thn_bayar = date('Y');
+        
         for($i=2010; $i<=$nowYear; $i++){
             ?>
-            <tr>
+            <tr <?=($i==date('Y') ? 'style="background-color: #98abf1; color: #fff"':'')?>>
                 <td align="center">
                     <?=$i?>
                 </td>
-                <td align="right"></td>
+                <td align="right"><?=$rekap->rekapLpH("jml_bayar", 0, 0, $i)?></td>
                 <td align="right"></td>
                 <td align="right"></td>
                 <td align="right"></td>

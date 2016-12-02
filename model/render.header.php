@@ -50,4 +50,7 @@
         z-index: 9999;
         text-align: center;
     }
+    .ui-datepicker-calendar {
+        display: none;
+    }
 </style>
