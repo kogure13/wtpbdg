@@ -23,15 +23,15 @@ $rekap = new Rekap;
        });
     });
 </script>
+
 <form class="form-group form-inline" method="post" enctype="multipart/form-data" novalidate="novalidate" id="vForm" accept="#" >
     <div class="form-group">
-        <input type="text" name="periode" id="txtDate" class="input-sm form-control" placeholder="Periode...">
+        <input type="text" name="periode" id="txtDate" class="" placeholder="Periode...">
     </div>
     <div class="form-group">
-        <input type="submit" name="submit_harian" value="Cari.." class="btn btn-sm btn-default">        
+        <input type="submit" name="submit_harian" value="Cari.." class="">        
     </div>    
 </form>
-
 
 <table class="rekap-table rekap-table-bordered">
     <thead>

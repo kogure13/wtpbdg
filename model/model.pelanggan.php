@@ -60,7 +60,7 @@
             useRp: true,
             rp: 20,
             showTableToggleBtn: false,            
-            width: 650,
+            width: 850,
             height: 435
         });
     });

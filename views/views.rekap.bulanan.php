@@ -7,6 +7,15 @@ $year_end = strtotime('last day of December', time());
  $rekap = new Rekap;
 ?>
 
+<form class="form-group form-inline" method="post" enctype="multipart/form-data" novalidate="novalidate" id="vForm" accept="#" >
+    <div class="form-group">
+        <input type="text" name="periode_bulanan" id="txtYear" class="" placeholder="Periode...">
+    </div>
+    <div class="form-group">
+        <input type="submit" name="submit_bulanan" value="Cari.." class="">        
+    </div>    
+</form>
+
 <table class="rekap-table rekap-table-bordered">
     <thead>
         <tr>
@@ -27,12 +36,17 @@ $year_end = strtotime('last day of December', time());
     </thead>
     <tbody>
         <?php
-        $thn_bayar = date('Y');
+        if(isset($_POST['submit_bulanan'])){
+            $thn_bayar = $_POST['periode_bulanan'];
+        }else{
+            $thn_bayar = date('Y');
+        }
+        
         for($i=0; $i<$endMonth; $i++){
             ?>
-            <tr <?=(($i+1)==date('m') ? 'style="background-color: #98abf1; color: #fff"':'')?>>
+            <tr>
                 <td align="">
-                    <?=namaBulan($i+1)." ".date('Y')?>
+                    <?=namaBulan($i+1)." ".$thn_bayar?>
                 </td>
                 <td align="right"><?=$rekap->rekapLpH("jml_bayar", 0, $i+1, $thn_bayar)?></td>
                 <td align="right"></td>
@@ -52,7 +66,7 @@ $year_end = strtotime('last day of December', time());
     <tfoot>
         <tr>
             <th align="center">JUMLAH</th>
-            <th align="right"></th>
+            <th align="right"><?=$rekap->rekapLpH("jml_bayar", 0, 0, $thn_bayar)?></th>
             <th align="right"></th>
             <th align="right"></th>
             <th align="right"></th>

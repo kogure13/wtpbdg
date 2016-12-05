@@ -6,10 +6,34 @@
     });
     
     $(document).ready(function () {
+        var tabs = $("#tab").tabs({
+            activate: function(event, ui){
+                //get the active tab index
+                var active = $("#tab").tabs("option", "active");
+
+                //save it to cookies
+                $.cookie("activeTabIndex", active);
+            }
+        });
+
+        //read the cookie
+        var activeTabIndex = $.cookie("activeTabIndex");
+
+        //make active needed tab
+        if(activeTabIndex !== undefined) {
+            tabs.tabs("option", "active", activeTabIndex);
+        }
+        
         $("#txtDate").datepicker({           
            format: 'mm/yyyy',
            autoclose: true,
            minViewMode: 1
+        });
+        $("#txtYear").datepicker({           
+           format: 'yyyy',
+           viewMode: "years", 
+           minViewMode: "years",
+           autoclose: true
         });
         
         $(".date").datepicker({

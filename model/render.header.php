@@ -19,6 +19,7 @@
 <script src="theme/startbootstrap/js/moment.min.js" type="text/javascript"></script>
 <!--<script src="theme/startbootstrap/js/jquery.daterangepicker.js" type="text/javascript"></script>-->
 <script src="theme/startbootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="theme/startbootstrap/js/jquery.cookie.min.js"></script>
 
 <style>
     .loading-overlay{display: none;position: absolute;left: 0; top: 0; right: 0; bottom: 0;z-index: 2;background: rgba(255,255,255,0.7);}

@@ -26,7 +26,7 @@ $nowYear = date('Y');
         
         for($i=2010; $i<=$nowYear; $i++){
             ?>
-            <tr <?=($i==date('Y') ? 'style="background-color: #98abf1; color: #fff"':'')?>>
+            <tr>
                 <td align="center">
                     <?=$i?>
                 </td>
