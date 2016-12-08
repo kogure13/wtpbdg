@@ -7,9 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, metro, front-end, frontend, web development" />
         <meta name="keywords" content="Billing, Manglayang, Bandung" />
+        
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />        
+        <link href="assets/css/my-custom-styles.css" rel="stylesheet" type="text/css" />
+        
         <link rel="shortcut icon" href="favicon.png">
-        <link href="theme/startbootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />        
-        <link href="theme/startbootstrap/css/login-box.css" rel="stylesheet" type="text/css" />
 
         <style>
             .error {
@@ -17,8 +19,8 @@
             }
         </style>
 
-        <script src="theme/startbootstrap/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-        <script src="theme/startbootstrap/js/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery/jquery-2.1.0.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery/jquery.validate.min.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(function () {
                 $("#vForm").validate({

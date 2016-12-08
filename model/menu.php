@@ -5,32 +5,23 @@ Menu Operator Lapangan
 Menu Manajer
 -->
 
-<ul class="sidebar-nav">
-    <!-- Admin Menu & Kasir -->
-    <li class="sidebar-brand">
-        <a href="index.php" id="beranda">            
-            Billing WTP Manglayang
-        </a>
-    </li>
-    <li>
-        <a href="index.php" id="data-beranda">
-            <i class="glyphicon glyphicon-home"></i>
-            Beranda
-        </a>
-    </li>
-    <?php
-    if ($_SESSION['accessrole'] == 1) {
-        include 'views/menu.admin.php';
-    } elseif ($_SESSION['accessrole'] == 2) {
-        include 'views/menu.operator.php';
-    } elseif ($_SESSION['accessrole'] == 3) {
-        include 'views/menu.manajer.php';
-    }
-    ?>
-    <li>
-        <a href="?page=logout" id="logout">      
-            <i class="glyphicon glyphicon-log-out"></i>
-            Logout
-        </a>
-    </li>
-</ul>
+<nav class="main-nav">
+    <ul class="main-menu">
+        <!-- Admin Menu & Kasir -->        
+        <li class="active">
+            <a href="index.php" id="data-beranda">
+                <i class="fa fa-dashboard fa-fw"></i>
+                Beranda
+            </a>
+        </li>
+        <?php
+        if ($_SESSION['accessrole'] == 1) {
+            include 'views/menu.admin.php';
+        } elseif ($_SESSION['accessrole'] == 2) {
+            include 'views/menu.operator.php';
+        } elseif ($_SESSION['accessrole'] == 3) {
+            include 'views/menu.manajer.php';
+        }
+        ?>        
+    </ul>    
+</nav>

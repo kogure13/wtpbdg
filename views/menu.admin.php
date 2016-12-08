@@ -1,77 +1,76 @@
 <!-- Admin Menu & Kasir -->
 <li>
     <a href="?page=views.pelanggan" id="data-pelanggan">  
-        <i class="glyphicon glyphicon-user"></i>
-        Data Pelanggan
+        <i class="fa fa-users fa-fw"></i>
+        <span class="text">Data Pelanggan</span>
     </a>
 </li>
 <li>
-    <a href="#" id="data-rekening" data-toggle="collapse" data-target="#data-rekening-list">
-        <i class="glyphicon glyphicon-check"></i>
-        Data Rekening
+    <a href="#" class="js-sub-menu-toggle">
+        <i class="fa fa-check fa-fw"></i><span class="text">Data Rekening</span>
+        <i class="toggle-icon fa fa-angle-left"></i>
     </a>
-    <ul class="submenu collapse list-unstyled" id="data-rekening-list">            
+    <ul class="sub-menu">            
         <li>
             <a href="?page=views.input.wm" id="in-water-meter">
-                <i class="glyphicon glyphicon-play"></i> Water Meter
+                <span class="text">Water Meter</span> 
             </a>
         </li>
-
         <li>
             <a href="?page=views.trans.rekair" id="rek-air">
-                <i class="glyphicon glyphicon-play"></i> Rekening Air 
+                <span class="text">Rekening Air</span> 
             </a>
         </li>
         <li>
             <a href="?page=views.trans.nonrekair" id="rek-non-air">
-                <i class="glyphicon glyphicon-play"></i> Rekening Non-Air
+                <span class="text">Rekening Non-Air</span>
             </a>
         </li>            
-
     </ul>
 </li>    
 <li>
     <a href="?page=views.rekap.penerimaan" id="rekap-penerimaan">            
-        <i class="glyphicon glyphicon-file"></i>
-        Laporan Penerimaan
+        <i class="fa fa-file"></i>
+        <span class="text">Laporan Penerimaan</span>
     </a>
 </li>
 <li>            
-    <a href="#" id="daftar-tunggakan" data-toggle="collapse" data-target="#daftar-tunggakan-list">
-        <i class="glyphicon glyphicon-alert"></i> Daftar Tunggakan
+    <a href="#" class="js-sub-menu-toggle">
+        <i class="fa fa-exclamation-triangle fa-fw"></i><span class="text">Daftar Tunggakan</span>
+        <i class="toggle-icon fa fa-angle-left"></i>
     </a>
-    <ul class="submenu collapse list-unstyled" id="daftar-tunggakan-list">
+    <ul class="sub-menu">
         <li>
             <a href="?page=views.tunggakan.air" id="tunggakan-air">
-                <i class="glyphicon glyphicon-play"></i> Tunggakan Rek. Air
+                <span class="text">Tunggakan Rek. Air</span>
             </a>
         </li>
         <li>
             <a href="?page=views.tunggakan.nonair" id="tunggakan-nonair">
-                <i class="glyphicon glyphicon-play"></i> Tunggakan Rek. Non Air
+                <span class="text">Tunggakan Rek. Non Air</span>
             </a>
         </li>
     </ul>
 </li>
 <li>
-    <a href="#" id="setting" data-toggle="collapse" data-target="#setting-list">
-        <i class="glyphicon glyphicon-cog"></i>
-        Pengaturan
+    <a href="#" class="js-sub-menu-toggle">
+        <i class="fa fa-cog fa-fw"></i><span class="text">Pengaturan</span>
+        <i class="toggle-icon fa fa-angle-left"></i>
     </a>
-    <ul class="submenu collapse list-unstyled" id="setting-list">                
+    <ul class="sub-menu">                
         <li>
             <a href="?page=views.user" id="data-user">            
-                <i class="glyphicon glyphicon-play"></i>Input Users
+                <span class="text">Input Users</span>
             </a>
         </li>
         <li>
             <a href="?page=views.abodemen" id="abodemen">
-                <i class="glyphicon glyphicon-play"></i>Input Abodemen
+                <span class="text">Input Abodemen</span>
             </a>
         </li>
         <li>
             <a href="?page=views.profile" id="profile">
-                <i class="glyphicon glyphicon-play"></i>Profile Perusahaan
+                <span class="text">Profile Perusahaan</span>
             </a>
         </li>
     </ul>

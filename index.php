@@ -21,5 +21,7 @@ if(!isset($_SESSION['user_login'])){
     
     include 'views/login.php';
 }else{
+    $main = new Main;
+    $user = new User;
     include 'model/main.php';
 }
