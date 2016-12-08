@@ -15,8 +15,8 @@
                     <div class="row">
                         <!-- logo -->
                         <div class="col-md-2 logo">
-                            <a href="index.php"><img src="" alt="Billing WTP Manglayang" /></a>
-                            <h1 class="sr-only"></h1>
+                            <a href="index.php"><img src="" alt="" /></a>
+                            <h1 class="sr-only">Billing WTP Manglayang</h1>
                         </div>
                         <!-- end logo -->
                         <div class="col-md-10">

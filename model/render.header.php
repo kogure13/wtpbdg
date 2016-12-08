@@ -10,6 +10,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    
+    <link href="assets/flexigrid/css/flexigrid.css" rel="stylesheet" type="text/css">
 
     <!--[if lte IE 9]>
             <link href="assets/css/main-ie.css" rel="stylesheet" type="text/css"/>
@@ -45,6 +47,9 @@
     <script src="assets/js/king-chart-stat.js"></script>
     <script src="assets/js/king-table.js"></script>
     <script src="assets/js/king-components.js"></script>    
+    
+    <script src="assets/flexigrid/js/jquery-migrate-1.2.1.js"></script>
+    <script src="assets/flexigrid/js/flexigrid.js"></script>
    
     <style>
         .loading-overlay{display: none;position: absolute;left: 0; top: 0; right: 0; bottom: 0;z-index: 2;background: rgba(255,255,255,0.7);}

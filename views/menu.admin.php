@@ -1,13 +1,14 @@
 <!-- Admin Menu & Kasir -->
 <li>
     <a href="?page=views.pelanggan" id="data-pelanggan">  
-        <i class="fa fa-users fa-fw"></i>
+        <i class="fa fa-users"></i>
         <span class="text">Data Pelanggan</span>
     </a>
 </li>
 <li>
     <a href="#" class="js-sub-menu-toggle">
-        <i class="fa fa-check fa-fw"></i><span class="text">Data Rekening</span>
+        <i class="fa fa-check"></i>
+        <span class="text">Data Rekening</span>
         <i class="toggle-icon fa fa-angle-left"></i>
     </a>
     <ul class="sub-menu">            
@@ -36,7 +37,8 @@
 </li>
 <li>            
     <a href="#" class="js-sub-menu-toggle">
-        <i class="fa fa-exclamation-triangle fa-fw"></i><span class="text">Daftar Tunggakan</span>
+        <i class="fa fa-exclamation-triangle"></i>
+        <span class="text">Daftar Tunggakan</span>
         <i class="toggle-icon fa fa-angle-left"></i>
     </a>
     <ul class="sub-menu">
@@ -54,7 +56,8 @@
 </li>
 <li>
     <a href="#" class="js-sub-menu-toggle">
-        <i class="fa fa-cog fa-fw"></i><span class="text">Pengaturan</span>
+        <i class="fa fa-cog"></i>
+        <span class="text">Pengaturan</span>
         <i class="toggle-icon fa fa-angle-left"></i>
     </a>
     <ul class="sub-menu">                

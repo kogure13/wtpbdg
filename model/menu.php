@@ -10,8 +10,8 @@ Menu Manajer
         <!-- Admin Menu & Kasir -->        
         <li class="active">
             <a href="index.php" id="data-beranda">
-                <i class="fa fa-dashboard fa-fw"></i>
-                Beranda
+                <i class="fa fa-dashboard"></i>
+                <span class="text">Beranda</span>
             </a>
         </li>
         <?php

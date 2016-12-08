@@ -1,29 +1,29 @@
 <script type="text/javascript">
-    $(function () {
-        $("#vForm").validate({
-            rules: {
-                nama_pelanggan: "required",
-                notelp: "required",
-                blok: "required",
-                kav: "required",
-                tipe: "required",
-                tglpasang: "required",
-                nowm: "required",
-                golKelas: "required"
-            },
-            messages: {
-                nama_pelanggan: " *) harus diisi",
-                notelp: " *) harus diisi",
-                tipe: " *) harus diisi",
-                tglpasang: " *) harus diisi",
-                nowm: " *) harus diisi",
-                golKelas: " *) harud diisi"
-            },
-            submitHandler: function (form) {
-                form.submit();
-            }
-        });
-    });
+//    $(function () {
+//        $("#vForm").validate({
+//            rules: {
+//                nama_pelanggan: "required",
+//                notelp: "required",
+//                blok: "required",
+//                kav: "required",
+//                tipe: "required",
+//                tglpasang: "required",
+//                nowm: "required",
+//                golKelas: "required"
+//            },
+//            messages: {
+//                nama_pelanggan: " *) harus diisi",
+//                notelp: " *) harus diisi",
+//                tipe: " *) harus diisi",
+//                tglpasang: " *) harus diisi",
+//                nowm: " *) harus diisi",
+//                golKelas: " *) harud diisi"
+//            },
+//            submitHandler: function (form) {
+//                form.submit();
+//            }
+//        });
+//    });
 
     $(document).ready(function (e) {
         var accessrole = "<?php echo $_SESSION['accessrole'] ?>";
@@ -58,10 +58,10 @@
             usepager: true,
             title: '',
             useRp: true,
-            rp: 20,
+            rp: 15,
             showTableToggleBtn: false,            
-            width: 850,
-            height: 435
+            width: 950,
+            height: 440
         });
     });
 </script>
@@ -70,6 +70,7 @@
 $userUI = new User;
 $dtaCRUD = new CRUD;
 $dataPelanggan = new Pelanggan;
+$arrayData = $dataPelanggan->viewPelanggan($status);
 
 $tableName = "wtp_pelanggan";
 $act = "crud.pelanggan";
@@ -172,6 +173,12 @@ if (isset($_POST['save']) || isset($_POST['update'])) {
         }
 //        print_r($validasi);
     }
+}
+
+if(isset($_POST['status'])){
+    $status = $_POST['status'];
+}else{
+    $status = 3;
 }
 
 modalView("Detail Data Pelanggan");
