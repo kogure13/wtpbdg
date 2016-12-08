@@ -24,7 +24,7 @@ if (!$rp)
 $start = (($page - 1) * $rp);
 $limit = "LIMIT $start, $rp";
 $sort = "ORDER BY $sortname $sortorder";
-$where = "WHERE wtp_tagihan_air.bln_input = ".$bln_input." AND wtp_tagihan_air.thn_input = ".$thn_input;
+$where = "";
 
 $query = mysql_real_escape_string($_POST['query']);
 $qtype = $_POST['qtype'];
