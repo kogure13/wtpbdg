@@ -2,37 +2,39 @@
 if($_SESSION['jobtitle'] == "Kasir"){
 ?>
 <li>
-    <a href="#" id="data-pembayaran" data-toggle="collapse" data-target="#data-pembayaran-list">
+    <a href="#" class="js-sub-menu-toggle">
         <i class="glyphicon glyphicon-credit-card"></i>
-        Data Pembayaran
+        <span class="text">Data Pembayaran</span>
     </a>
-    <ul class="submenu collapse list-unstyled" id="data-pembayaran-list">
+    <ul class="sub-menu">
         <li>
-            <a href="?page=views.trans.rekair" id="rek-air">
-                <i class="glyphicon glyphicon-play"></i> Pembayaran Rekening Air 
+            <a href="?page=views.trans.rekair" id="rek-air">                
+                <span class="text">Rekening Air</span>
             </a>
         </li>
         <li>
-            <a href="?page=views.trans.nonrekair" id="rek-non-air">
-                <i class="glyphicon glyphicon-play"></i> Pembayaran Rekening Non-Air
+            <a href="?page=views.trans.nonrekair" id="rek-non-air">                
+                <span class="text">Rekening Non-Air</span>
             </a>
         </li>
     </ul>
 </li>
 <li>
     <a href="#" id="rekap-penerimaan">
-        <i class="glyphicon glyphicon-book"></i> Rekap Penerimaan
+        <i class="glyphicon glyphicon-book"></i> 
+        <span class="text">Rekap Penerimaan</span>
     </a>
 </li>
 <?php } else { ?>
 <li>
-    <a href="#" id="data-rekening" data-toggle="collapse" data-target="#data-rekening-list">
-        <i class="glyphicon glyphicon-check"></i> Data Rekening
+    <a href="#" class="js-sub-menu-toggle">
+        <i class="glyphicon glyphicon-check"></i> 
+        <span class="text">Data Rekening</span>
     </a>
-    <ul class="submenu collapse list-unstyled" id="data-rekening-list">            
+    <ul class="sub-menu">            
         <li>
-            <a href="?page=views.input.wm" id="in-water-meter">
-                <i class="glyphicon glyphicon-play"></i> Water Meter
+            <a href="?page=views.input.wm" id="in-water-meter">                
+                <span class="text">Water Meter</span>
             </a>
         </li>        
     </ul>

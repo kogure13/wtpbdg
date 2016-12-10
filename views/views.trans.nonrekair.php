@@ -1,9 +1,11 @@
 <?php include_once "model/model.trans.nonrekair.php"; ?>
 
-<div class="panel panel-body">        
-    <fieldset>
-        <legend> Transaksi Rekening Non-Air</legend>
-
+<div class="content">
+    <div class="main-header">
+        <h2>Transaksi Rekening Non-Air</h2>
+        <em></em>
+    </div>
+    <div class="main-content">
         <form method="post" accept="#" novalidate="novalidate" id="vForm">
             <div class="form-group row">
                 <label for="namaLoket" class="col-sm-2 col-form-label">Loket Pembayaran</label>
@@ -52,7 +54,7 @@
                     <label class="radio-inline">
                         <input type="radio" name="caraBayar" value="Anggunan" id="anggunan"> Anggunan
                     </label>                    
-                    
+
                     <div class="bayarCash form-group" style="margin-top: 5px;">
                         <input type="text" class="input-sm form-control"  readonly="readonly" id="nominalBayarCash">
                     </div>
@@ -73,10 +75,10 @@
             </div>                
             <div class="form-group row">
                 <div class="col-sm-4">
-                    <input type="submit" name="simpan_transaksi" class="btn btn-sm" value="Simpan">                
+                    <input type="submit" name="simpan_transaksi" class="btn btn-sm btn-success" value="Simpan">                
                     <input type="button" class="btn btn-sm btn-danger" value="Batal Transaksi" onclick="location.href = '<?= $page_before ?>'">                
                 </div>
             </div>      
-        </form>                              
-    </fieldset>
+        </form>
+    </div>
 </div>

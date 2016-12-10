@@ -1731,8 +1731,8 @@ tr.ui-search-toolbar select {
 
 /* line 84, ../../sass/vendors/_ui.jqgrid.scss */
 * html .jqgrid-overlay {
-  width: expression(this.parentNode.offsetWidth+'px');
-  height: expression(this.parentNode.offsetHeight+'px');
+/*  width: expression(this.parentNode.offsetWidth+'px');
+  height: expression(this.parentNode.offsetHeight+'px');*/
 }
 
 /* line 85, ../../sass/vendors/_ui.jqgrid.scss */
@@ -1741,8 +1741,8 @@ tr.ui-search-toolbar select {
   top: 0;
   left: 0;
   z-index: -1;
-  width: expression(this.parentNode.offsetWidth+'px');
-  height: expression(this.parentNode.offsetHeight+'px');
+/*  width: expression(this.parentNode.offsetWidth+'px');
+  height: expression(this.parentNode.offsetHeight+'px');*/
 }
 
 /* end loading div */
@@ -2030,8 +2030,8 @@ tr.ui-search-toolbar select {
   top: 0;
   left: 0;
   z-index: -1;
-  width: expression(this.parentNode.offsetWidth+'px');
-  height: expression(this.parentNode.offsetHeight+'px');
+/*  width: expression(this.parentNode.offsetWidth+'px');
+  height: expression(this.parentNode.offsetHeight+'px');*/
 }
 
 /* line 139, ../../sass/vendors/_ui.jqgrid.scss */
@@ -22853,8 +22853,7 @@ div[class*="col-"] > .form-group {
 /*------------------------------------------------*/
 /* line 5, ../../sass/partials/pages/_invoice.scss */
 .invoice-header {
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 50px;
+  border-bottom: 1px solid #ddd;  
 }
 /* line 9, ../../sass/partials/pages/_invoice.scss */
 .invoice-header ul {
@@ -22884,7 +22883,7 @@ div[class*="col-"] > .form-group {
 
 /* line 31, ../../sass/partials/pages/_invoice.scss */
 .invoice-from-to {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 /* line 34, ../../sass/partials/pages/_invoice.scss */
 .invoice-from-to .name {

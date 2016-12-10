@@ -1,46 +1,50 @@
 <script type="text/javascript">
-//    $(function () {
-//        $("#vForm").validate({
-//            rules: {
-//                nama_pelanggan: "required",
-//                notelp: "required",
-//                blok: "required",
-//                kav: "required",
-//                tipe: "required",
-//                tglpasang: "required",
-//                nowm: "required",
-//                golKelas: "required"
-//            },
-//            messages: {
-//                nama_pelanggan: " *) harus diisi",
-//                notelp: " *) harus diisi",
-//                tipe: " *) harus diisi",
-//                tglpasang: " *) harus diisi",
-//                nowm: " *) harus diisi",
-//                golKelas: " *) harud diisi"
-//            },
-//            submitHandler: function (form) {
-//                form.submit();
-//            }
-//        });
-//    });
+    $(function () {
+        $("#vForm").validate({
+            rules: {
+                nama_pelanggan: "required",
+                notelp: "required",
+                blok: "required",
+                kav: "required",
+                tipe: "required",
+                tglpasang: "required",
+                nowm: "required",
+                golKelas: "required"
+            },
+            messages: {
+                nama_pelanggan: " *) harus diisi",
+                notelp: " *) harus diisi",
+                tipe: " *) harus diisi",
+                tglpasang: " *) harus diisi",
+                nowm: " *) harus diisi",
+                golKelas: " *) harud diisi"
+            },
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+    });
 
     $(document).ready(function (e) {
         var accessrole = "<?php echo $_SESSION['accessrole'] ?>";
         var statusPelanggan = "<?php
-        if (isset($_POST['status'])) {
-            echo $status = $_POST['status'];
-        } else {
-            echo $status = 1;
-        }
-        ?>";
+if (isset($_POST['status'])) {
+    echo $status = $_POST['status'];
+} else {
+    echo $status = 1;
+}
+?>";
+        var id = "<?php
+if (isset($_POST['id_pel'])) {
+    echo $id = $_POST['id_pel'];
+} 
+?>";
 
         //var main = "model/data.pelanggan.php?accessrole=" + accessrole + "&status=" + statusPelanggan;
         //$("#dtaPelanggan").load(main);
 
-        $("#tblPelanggan").flexigrid({            
-            
-            url: 'model/data.pelanggan.php?accessrole='+ accessrole +'&status=' + statusPelanggan,
+        $("#tblPelanggan").flexigrid({
+            url: 'model/data.pelanggan.php?id='+id+'&accessrole='+accessrole+'&status='+statusPelanggan,
             dataType: 'json',
             colModel: [
                 {display: 'ID Pelanggan', name: 'id_Pel', width: 100, sortable: true, align: 'left'},
@@ -49,19 +53,27 @@
                 {display: 'Status', name: 'status', width: 80, sortable: true, align: 'left'},
                 {display: 'Aksi', name: 'act_link', width: 80, sortable: true, align: 'center'}
             ],
-            searchitems: [
-                {display: 'ID', name: 'id_Pel'},
-                {display: 'Nama Pelanggan', name: 'nama_pemilik', isdefault: true}
-            ],
             sortname: "id",
             sortorder: "asc",
             usepager: true,
             title: '',
             useRp: true,
-            rp: 15,
-            showTableToggleBtn: false,            
+            rp: 10,
+            showTableToggleBtn: false,
             width: 950,
-            height: 440
+            height: 300
+        });
+
+        $("#alamat").autocomplete({
+            source: "model/model.auto.trans.rekair.php",
+            minLength: 1,
+            select: function (event, ui) {
+                event.preventDefault();
+                $("#alamat").val(ui.item.label);
+                this.value = ui.item.label;
+                $("#pelanggan").val(ui.item.value);
+                $("#id_pel").val(ui.item.id_pel);
+            }
         });
     });
 </script>
@@ -175,9 +187,9 @@ if (isset($_POST['save']) || isset($_POST['update'])) {
     }
 }
 
-if(isset($_POST['status'])){
+if (isset($_POST['status'])) {
     $status = $_POST['status'];
-}else{
+} else {
     $status = 3;
 }
 

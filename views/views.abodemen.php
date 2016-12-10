@@ -1,15 +1,17 @@
 <?php include_once "model/model.abodemen.php"; ?>
 
-<div class="panel panel-body">        
-    <fieldset>
-        <legend> Data Abodemen</legend>
+<div class="content">        
+    <div class="main-header">
+        <h2>Data Abodemen</h2>
+    </div>
+    <div class="main-content">
         <div class="form-inline">
             <div class="form-group">
                 <a href="?page=crud&act=<?= $act ?>" class="btn btn-sm btn-primary" id="tambah-user">Tambah Data</a>    
             </div>            
         </div>    
         <hr class="thin bg-grayLighter" />
-        <table class="table table-condensed table-bordered table-striped tbl-scroll" id="table-pelanggan">
+        <table id="featured-datatable" class="table table-sorting table-striped table-hover datatable dataTable no-footer" role="grid" aria-describedby="featured-datatable_info">
             <thead>
                 <tr>
                     <th width="10%"> Opsi</th>
@@ -27,16 +29,16 @@
                         <tr>
                             <td align="center">
                                 <?= $userUI->actBtn($data['id'], $act, $akses) ?>
-                                <a href="#" id="abodemen-info" class="view" data-id="<?=$data['id']?>">
+                                <a href="#" id="abodemen-info" class="view" data-id="<?= $data['id'] ?>">
                                     <i class="glyphicon glyphicon-info-sign"></i>                                
                                 </a>                                
                             </td>                            
-                            <td><?=$data['namakelas']?></td>
-                            <td><?=$data['kelas']?> / <?=$data['golongan']?></td>                              
-                            <td><?=number_format($data['biayasr'])?></td>                            
-                            <td><?=  number_format($data['mtrhilang'])?></td>
-                            <td><?=  number_format($data['mtrrusak'])?></td>
-                            <td><?=  number_format($data['abodemen'])?></td>
+                            <td><?= $data['namakelas'] ?></td>
+                            <td><?= $data['kelas'] ?> / <?= $data['golongan'] ?></td>                              
+                            <td><?= number_format($data['biayasr']) ?></td>                            
+                            <td><?= number_format($data['mtrhilang']) ?></td>
+                            <td><?= number_format($data['mtrrusak']) ?></td>
+                            <td><?= number_format($data['abodemen']) ?></td>
                         </tr>
                         <?php
                         $i++;
@@ -45,6 +47,6 @@
                 ?>
             </tbody>
         </table>               
-    </fieldset>
+    </div>    
 </div>
 

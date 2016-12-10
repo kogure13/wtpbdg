@@ -64,8 +64,7 @@ if ($numrow > 0) {
                 $row['meter_akhir'],
                 $total,
                 $row['bln_input']." - ".$row['thn_input'],
-                "<a href=?page=crud&act=" . $act . "&req=edit&id=" . $row['id'] . " class=text-primary data-toggle=tooltip data-placement=bottom title=Edit><i class=\"glyphicon glyphicon-edit\"></i></a>"
-                ."<a href=?page=crud&act=" . $act . "&req=delete&id=" . $row['id'] . " class=text-danger data-toggle=tooltip data-placement=bottom title=Delete onclick=\"return confirm('Are you sure delete this data ?')\"> <i class=\"glyphicon glyphicon-trash\"></i></a>"
+                "<a href=?page=crud&act=" . $act . "&req=edit&id=" . $row['id'] . " class=text-primary title=Edit><i class=\"glyphicon glyphicon-edit\"></i></a>"                
             )            
         );        
     }

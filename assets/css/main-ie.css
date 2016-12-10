@@ -1729,10 +1729,10 @@ tr.ui-search-toolbar select {
 }
 
 /* line 84, ../../sass/vendors/_ui.jqgrid.scss */
-* html .jqgrid-overlay {
+/** html .jqgrid-overlay {
   width: expression(this.parentNode.offsetWidth+'px');
   height: expression(this.parentNode.offsetHeight+'px');
-}
+}*/
 
 /* line 85, ../../sass/vendors/_ui.jqgrid.scss */
 * .jqgrid-overlay iframe {
@@ -1740,8 +1740,8 @@ tr.ui-search-toolbar select {
   top: 0;
   left: 0;
   z-index: -1;
-  width: expression(this.parentNode.offsetWidth+'px');
-  height: expression(this.parentNode.offsetHeight+'px');
+/*  width: expression(this.parentNode.offsetWidth+'px');
+  height: expression(this.parentNode.offsetHeight+'px');*/
 }
 
 /* end loading div */
@@ -2029,8 +2029,8 @@ tr.ui-search-toolbar select {
   top: 0;
   left: 0;
   z-index: -1;
-  width: expression(this.parentNode.offsetWidth+'px');
-  height: expression(this.parentNode.offsetHeight+'px');
+/*  width: expression(this.parentNode.offsetWidth+'px');
+  height: expression(this.parentNode.offsetHeight+'px');*/
 }
 
 /* line 139, ../../sass/vendors/_ui.jqgrid.scss */
@@ -17059,7 +17059,7 @@ div.DTTT_collection a.DTTT_button {
     margin-left: 0;
     margin-right: 0;
   }
-}
+
 /*------------------------------------------------*/
 /*	General Styles
 /*------------------------------------------------*/

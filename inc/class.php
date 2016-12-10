@@ -73,7 +73,7 @@ class User {
                 <a href="?page=crud&act=' . $act . '&req=edit&id=' . $id . '" class="text-primary" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="glyphicon glyphicon-edit"></i></a>
                 <a href="?page=crud&act=' . $act . '&req=delete&id=' . $id . '" class="text-danger" data-toggle="tooltip" data-placement="bottom" title="Delete" onclick="return confirm(\'Are you sure delete this data ?\')"> <i class="glyphicon glyphicon-trash"></i></a>
             ';
-        }
+        }                
     }
 
     function authorFooter() {

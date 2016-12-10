@@ -8,7 +8,8 @@
         <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, metro, front-end, frontend, web development" />
         <meta name="keywords" content="Billing, Manglayang, Bandung" />
         
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />        
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/login-box.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/my-custom-styles.css" rel="stylesheet" type="text/css" />
         
         <link rel="shortcut icon" href="favicon.png">

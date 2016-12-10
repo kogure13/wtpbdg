@@ -55,15 +55,11 @@ $rekap = new Rekap;
         <?php        
         if(isset($_POST['submit_harian'])){
             list($bln_bayar, $thn_bayar) = explode("/", $_POST['periode']);
-//            $selisih = date('m') - $bln_bayar;            
-//            $selisih = strtotime('- '.$selisih.' month', strtotime($bln_bayar));
-            $dateFirst = $bln_bayar."/1/".$thn_bayar;
-            
+            $dateFirst = $bln_bayar."/1/".$thn_bayar;                        
             $endDate = date('t', strtotime($dateFirst));
             $date = date('M', strtotime($dateFirst));
-//            exit;
-//            $endDate = date('d', $date);
-            $format = $date." ".date('Y');
+            //exit();
+            $format = $date." ".$thn_bayar;
         }else{
             $bln_bayar = date('m');
             $thn_bayar = date('Y');
@@ -79,15 +75,15 @@ $rekap = new Rekap;
                 <td align="center">
                     <?=($i+1)." ".$format?>
                 </td>
-                <td align="right"> <?=$a[$i] = $rekap->rekapLpH("jml_bayar", $i+1, $bln_bayar, $thn_bayar)?></td>
-                <td align="right"> </td>
-                <td align="right"> </td>
-                <td align="right"><?=$d[$i] = $a[$i] ?> </td>
+                <td align="right"><?=$rekap->rekapLpH("jml_bayar", $i+1, $bln_bayar, $thn_bayar)?></td>
+                <td align="right"></td>
+                <td align="right"></td>
+                <td align="right"></td>
                 <td align="right"></td>
                 <td align="right"></td>
                 <td align="right"></td>
                 <td align="right">
-                    <b>haha</b>
+                    <b>Total Penerimaan</b>
                 </td>
             </tr>
             <?php

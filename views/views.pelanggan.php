@@ -12,14 +12,18 @@
             </div>
             <div class="form-group">                
                 <form method="post" class="form-inline" enctype="multipart/form-data" novalidate="novalidate" id="vForm" accept="#" >
-                    <div class="form-group input-group">
+                    <div class="form-group">
                         <select name="status" class="input-sm form-control" onchange="this.form.submit()">                            
                             <option value="3" <?= $status == 3 ? 'selected="selected"' : '' ?>> Status Pelanggang</option>
                             <option value="1" <?= $status == 1 ? 'selected="selected"' : '' ?>> Aktif</option>
                             <option value="2" <?= $status == 2 ? 'selected="selected"' : '' ?>> Pemutusan</option>
                             <option value="0" <?= $status == 0 ? 'selected="selected"' : '' ?>> Non-Aktif</option>                        
-                        </select>
+                        </select>                    
                     </div>                    
+                    <div class="form-group">
+                        <input type="hidden" name="id_pel" id="id_pel">
+                        <input type="text" name="alamat" class="input-sm form-control" id="alamat" placeholder="Pencarian...">
+                    </div>
                 </form>
             </div>                    
         </div>    

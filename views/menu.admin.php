@@ -12,11 +12,12 @@
         <i class="toggle-icon fa fa-angle-left"></i>
     </a>
     <ul class="sub-menu">            
+<!--
         <li>
             <a href="?page=views.input.wm" id="in-water-meter">
                 <span class="text">Water Meter</span> 
             </a>
-        </li>
+        </li>-->
         <li>
             <a href="?page=views.trans.rekair" id="rek-air">
                 <span class="text">Rekening Air</span> 
@@ -38,7 +39,7 @@
 <li>            
     <a href="#" class="js-sub-menu-toggle">
         <i class="fa fa-exclamation-triangle"></i>
-        <span class="text">Daftar Tunggakan</span>
+        <span class="text">Laporan Tunggakan</span>
         <i class="toggle-icon fa fa-angle-left"></i>
     </a>
     <ul class="sub-menu">

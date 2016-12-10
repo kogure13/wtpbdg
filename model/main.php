@@ -3,10 +3,8 @@
 <!--[if !(IE)]><!-->
 <html lang="en" class="no-js">
     <!--<![endif]-->
-
     <?= $main->renderHeader(); ?>
-
-    <body class="dashboard">
+    <body>
         <!-- WRAPPER -->
         <div class="wrapper">
             <!-- TOP BAR -->
@@ -23,7 +21,6 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <!-- search box -->
-
                                     <!-- end search box -->
                                 </div>
                                 <div class="col-md-9">
@@ -31,7 +28,6 @@
                                         <!-- responsive menu bar icon -->
                                         <a href="#" class="hidden-md hidden-lg main-nav-toggle"><i class="fa fa-bars"></i></a>
                                         <!-- end responsive menu bar icon -->                                        
-
                                         <!-- logged user and the menu -->
                                         <div class="logged-user">
                                             <div class="btn-group">
@@ -109,6 +105,6 @@
             &copy; 2013 The Develovers
         </footer>
         <!-- END FOOTER -->        
-
+    <?=$main->renderScript();?>
     </body>
 </html>

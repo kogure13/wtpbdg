@@ -28,18 +28,7 @@
                 $("#pelanggan").val(ui.item.value);
                 $("#id_pel").val(ui.item.id_pel);
             }
-        });
-
-        $("#bulan").on('change', function () {
-            var id_pel = $("#id_pel").val();
-            if (id_pel == 0) {
-                alert("Alamat Pelanggan Kosong");
-                $("#alamat").focus();
-            } else {
-                var bulan = $("#bulan").val();
-                var tahun = $("#tahun").val();
-            }
-        });
+        });        
     });
 
     $(document).ready(function (e) {
@@ -92,7 +81,7 @@ $dtaLoket = new Main;
 $dtaTransaksi = new Transaksi;
 $dtaTarif = new Rekap;
 
-$tableName = "wtp_tagihan";
+$tableName = "wtp_tagihan_air";
 $act = "crud.trans.rekair";
 $page_before = "?page=views.trans.rekair";
 $value_cancel = "Batal";
@@ -120,7 +109,7 @@ if (isset($_POST['cari_transaksi'])) {
 
     $count = mysql_num_rows($arrayData);
 
-    if ($count > 1) {
+    if ($count > 0) {
         //Hitung Denda
         $tgl_pembayaran = date("d", strtotime($_POST['bulan']));
         if ($tgl_pembayaran > $tgl_jthTempo) {
@@ -194,10 +183,23 @@ if (isset($_POST['cari_transaksi'])) {
             $pembulatan_angka = pembulatan_angka($total_bayar, 2, 100);
         }                
         // End hitung kubikasi
+        $array_map = array(
+            'id_pel'=>$id_pelanggan,
+            'id_info_tarif'=>$id_tarif,
+            'id_operator'=>$_SESSION['id'],
+            'tlg_transaksi'=>$_POST['bulan'],
+            'abodemne'=>$abodemen,
+            'jml_bayar'=>$subTotal,
+            'pembulatan'=>$pembulatan_angka,
+            'denda'=>$denda
+        );
+        $serial = serialize($array_map);
+        $hash_code = base64_encode($serial);
     } else {
         $userUI->noData($page_before);
     }
 }else{
     $value_style = "";
     $value_print = "display: none;";
+    $hash_code = "";
 }
