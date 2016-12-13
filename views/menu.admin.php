@@ -1,13 +1,13 @@
 <!-- Admin Menu & Kasir -->
 <li>
     <a href="?page=views.pelanggan" id="data-pelanggan">  
-        <i class="fa fa-users"></i>
+        <i class="fa fa-users fa-fw"></i>
         <span class="text">Data Pelanggan</span>
     </a>
 </li>
 <li>
     <a href="#" class="js-sub-menu-toggle">
-        <i class="fa fa-check"></i>
+        <i class="fa fa-check fa-fw"></i>
         <span class="text">Data Rekening</span>
         <i class="toggle-icon fa fa-angle-left"></i>
     </a>
@@ -32,13 +32,13 @@
 </li>    
 <li>
     <a href="?page=views.rekap.penerimaan" id="rekap-penerimaan">            
-        <i class="fa fa-file"></i>
+        <i class="fa fa-file fa-fw"></i>
         <span class="text">Laporan Penerimaan</span>
     </a>
 </li>
 <li>            
     <a href="#" class="js-sub-menu-toggle">
-        <i class="fa fa-exclamation-triangle"></i>
+        <i class="fa fa-exclamation-triangle fa-fw"></i>
         <span class="text">Laporan Tunggakan</span>
         <i class="toggle-icon fa fa-angle-left"></i>
     </a>

@@ -3,7 +3,7 @@ if($_SESSION['jobtitle'] == "Kasir"){
 ?>
 <li>
     <a href="#" class="js-sub-menu-toggle">
-        <i class="glyphicon glyphicon-credit-card"></i>
+        <i class="fa fa-cc fa-fw"></i>
         <span class="text">Data Pembayaran</span>
     </a>
     <ul class="sub-menu">
@@ -21,14 +21,14 @@ if($_SESSION['jobtitle'] == "Kasir"){
 </li>
 <li>
     <a href="#" id="rekap-penerimaan">
-        <i class="glyphicon glyphicon-book"></i> 
+        <i class="fa fa-book"></i> 
         <span class="text">Rekap Penerimaan</span>
     </a>
 </li>
 <?php } else { ?>
 <li>
     <a href="#" class="js-sub-menu-toggle">
-        <i class="glyphicon glyphicon-check"></i> 
+        <i class="fa fa-check-square-o"></i> 
         <span class="text">Data Rekening</span>
     </a>
     <ul class="sub-menu">            
